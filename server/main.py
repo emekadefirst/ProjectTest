@@ -23,14 +23,14 @@ def all():
     data = all_product()
     return data
 
-@app.get("/peoduct/{id}")
+@app.get("/product/{id}")
 async def get(id):
     product = await get_by_id(id)
     if product is None:
         raise HTTPException(status_code=404, detail="Product not found")
     return product
 
-@app.post("/products/")
+@app.post("/product/")
 async def create_product(
     name: str = Form(...),
     quantity: int = Form(...),
