@@ -3,7 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 
 # Using eBay as test site 
-product_name = "WHITE HANGING HEART T-LIGHT HOLDER"
+product_name = input(str("Enter object name below\n>> ")).lower()
+print("This scripts is fetching all the images from ebay and it's only scrape the firstpage atleats for now")
 domain = "https://www.ebay.com/sch/i.html?_from=R40&_trksid=p4432023.m570.l1313&_nkw="
 url = f'{domain}{product_name}'
 
